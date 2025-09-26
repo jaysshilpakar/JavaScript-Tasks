@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="numb1">
+<input id="numb2">
+
+<button type="button" onclick="add()">Submit</button>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<script>
+function add() {
+ 
+  let x = document.getElementById("numb1").value;
+  let y = document.getElementById("numb2").value;
+  let p = parseInt(x);
+  let q = parseInt(y);
+ 
+  let text1 = x+y;
+  let text2 = p+q;
+ 
+  document.getElementById("demo1").innerHTML = text1;
+  document.getElementById("demo2").innerHTML = text2;
+}
+</script>
+
+</body>
+</html> 
