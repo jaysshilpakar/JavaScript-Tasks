@@ -1,13 +1,44 @@
 <html>
    <head>       
-    <script type="text/javascript">         </script>   
+    <script type="text/javascript"> 
+        var n1 = document.form1.num1.value;
+        
+        var n2 = document.form1.num2.value;
+
+        function add(){
+            let r1 = n1 + n2;
+            alert(r1);
+            document.getElementById("result").textContent = r1;
+        }
+
+        function subtract(){
+            let r2 = n1 - n2;
+            alert(r2);
+        }
+
+        function multiply(){
+            let r3 = n1 * n2;
+            alert(r3);
+        }
+
+        function divide(){
+            let r4 = n1 / n2;
+            alert(r4);
+        }
+
+        function modulus(){
+            let r5 = n1 % n2;
+            alert(r5);
+        }
+
+    </script>   
    </head>
    
    <body>
        <div>
            <h3>DOM Manipulation and Event Handling Task</h3>
        </div>
-   <form>
+   <form name = "form1">
        <div>
            <label>Number 1:</label>
            <input type="number" name="num1" id="num1" value="">
@@ -21,12 +52,12 @@
        <br>
 
        <div>
-           <button type="submit" id="add" style="color:green">ADD</button>
-           <button type="submit" id="sub" style="color:red">SUBTRACT</button>
-           <button type="submit" id="mul" style="color:blue">MULTIPLY</button>
+           <button type="submit" id="add" style="color:green" onclick = add(); >ADD</button>
+           <button type="submit" id="sub" style="color:red" onmousehover = subtract();>SUBTRACT</button>
+           <button type="submit" id="mul" style="color:blue" onmousedown = multiply();>MULTIPLY</button>
            <br><br>
-           <button type="submit" id="div" style="color:orange">DIVIDE</button>
-           <button type="submit" id="mod" style="color:pink">MODULUS</button>
+           <button type="submit" id="div" style="color:orange" onmouseup = divide();>DIVIDE</button>
+           <button type="submit" id="mod" style="color:pink" onmouseout = modulus();>MODULUS</button>
        </div>
        <br>
 
